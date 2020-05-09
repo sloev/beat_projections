@@ -1,0 +1,46 @@
+[build-system]
+requires = ["briefcase"]
+
+[tool.briefcase]
+project_name = "auditraq"
+bundle = "earth.buro"
+version = "0.0.1"
+url = "https://buro.earth/auditraq"
+license = "GNU General Public License v2 (GPLv2)"
+author = 'Earth Buro'
+author_email = "johannes.valbjorn@gmail.com"
+
+[tool.briefcase.app.auditraq]
+formal_name = "auditraq"
+description = "analyses audio and talks osc"
+icon = "src/auditraq/resources/auditraq"
+sources = ['src/auditraq']
+requires = [
+    'wheel>=0.34.2',
+    'aubio>=0.4.9',
+    'python-osc>=1.7.4',
+    'soundcard>=0.3.3'
+]
+
+
+[tool.briefcase.app.auditraq.macOS]
+requires = [
+    'toga-cocoa>=0.3.0.dev18',
+]
+
+[tool.briefcase.app.auditraq.linux]
+requires = [
+    'toga-gtk>=0.3.0.dev18',
+]
+system_requires = [
+    'libgirepository1.0-dev',
+    'libcairo2-dev',
+    'libpango1.0-dev',
+    'libwebkitgtk-3.0-0',
+    'gir1.2-webkit-3.0',
+]
+[tool.briefcase.app.auditraq.windows]
+requires = [
+    'toga-winforms>=0.3.0.dev18',
+]
+

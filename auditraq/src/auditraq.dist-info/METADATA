@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: auditraq
+Formal-Name: auditraq
+App-ID: earth.buro.auditraq
+Version: 0.0.1
+Home-page: https://buro.earth/auditraq
+Author: Earth Buro
+Author-email: johannes.valbjorn@gmail.com
+Summary: analyses audio and talks osc
